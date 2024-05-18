@@ -116,6 +116,14 @@ namespace WebAppECart.Controllers
             return View(item);
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                onlineshopEntities.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
 
     }
